@@ -8,7 +8,7 @@ public class AmbiantCube : MonoBehaviour
 
     void Awake()
     {
-        r_rotate_interval = new Vector3(Random.Range(0f, 0.005f), Random.Range(0f, 0.005f), Random.Range(0f, 0.005f));
+        r_rotate_interval = new Vector3(Random.Range(0f, 0.015f), Random.Range(0f, 0.015f), Random.Range(0f, 0.015f));
     }
 
     void Update()

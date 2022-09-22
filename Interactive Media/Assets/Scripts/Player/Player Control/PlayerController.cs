@@ -77,11 +77,11 @@ public class PlayerController : MonoBehaviour
 
             var bulletDirection = transform.forward.normalized;
 
-            bullet.GetComponent<Rigidbody>().velocity = new Vector3(bulletDirection.x, bulletDirection.y + 0.04f, bulletDirection.z) * bulletSpeed;
+            bullet.GetComponent<Rigidbody>().velocity = new Vector3(bulletDirection.x, bulletDirection.y + 0.03f, bulletDirection.z) * bulletSpeed;
 
             Destroy(bullet, 5);
 
-            StartCoroutine(_player.waitForShoot());
+            StartCoroutine(_player.WaitForShoot());
         }
     }
 

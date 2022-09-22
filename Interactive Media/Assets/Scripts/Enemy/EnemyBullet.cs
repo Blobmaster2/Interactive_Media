@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBullet : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 8)
+        if (collision.gameObject.layer == 6)
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<Player>().TakeDamage(1);
             Destroy(gameObject);
-            GameObject.Find("Player").GetComponent<Player>()._score += 100;
         }
 
         if (collision.gameObject.layer == 0)
